@@ -1,0 +1,21 @@
+# No data files are committed. Everything under data/ is rebuilt by
+#   python -m src.data_loader && python -m src.nlp_tagger
+data/**
+!data/
+!data/*/
+!data/**/.gitkeep
+
+report/build/
+
+outputs/*
+!outputs/.gitkeep
+!outputs/*.png
+!outputs/*.csv
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.DS_Store

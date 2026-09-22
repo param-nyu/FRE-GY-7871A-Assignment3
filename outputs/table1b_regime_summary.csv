@@ -1,0 +1,5 @@
+Regime,Definition,Days,Share (%)
+H_bad,"High war news, escalation (text-classified)",23,16.4
+H_good,"High war news, de-escalation (text-classified)",19,13.6
+L_baseline,"Low war news, macro fundamentals",98,70.0
+All,Trading days in sample,140,100.0

@@ -1,0 +1,10 @@
+"Pair (x1, x2)",Var_H(x1),Var_L(x1),Ratio H/L,Rank condition
+2-Year Treasury / 10-Year Treasury Yield,18.8252,30.4367,0.62,FAILS
+2-Year Treasury / Break-even Inflation (10-year),18.8252,30.4367,0.62,FAILS
+2-Year Treasury / S&P 500,18.8252,30.4367,0.62,FAILS
+2-Year Treasury / BBB Corporate Spread (OAS),18.8252,30.4367,0.62,FAILS
+2-Year Treasury / High-Yield Corporate Spread (OAS),18.8252,30.4367,0.62,FAILS
+2-Year Treasury / WTI Crude Oil Futures,18.8252,30.4367,0.62,FAILS
+2-Year Treasury / Gold Futures,18.8252,30.4367,0.62,FAILS
+2-Year Treasury / U.S. Dollar Index,18.8252,30.4367,0.62,FAILS
+2-Year Treasury / 3-Month Treasury Bill,18.8252,30.4367,0.62,FAILS

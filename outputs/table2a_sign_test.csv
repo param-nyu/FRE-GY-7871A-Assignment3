@@ -1,0 +1,7 @@
+Quantity,Value,Units,N
+Mean WTI change on escalation (H_bad) days,0.99,$/bbl,23
+Mean 2Y change on escalation (H_bad) days,2.65,bp,23
+Mean WTI change on de-escalation (H_good) days,0.17,$/bbl,19
+Mean 2Y change on de-escalation (H_good) days,0.84,bp,19
+"Contrast (escalation minus de-escalation), WTI",0.82,$/bbl,"t=0.49, p=0.630"
+"Contrast (escalation minus de-escalation), 2Y",1.81,bp,"t=1.36, p=0.183"

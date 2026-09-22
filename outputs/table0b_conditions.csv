@@ -1,0 +1,10 @@
+Condition,Value
+Trading days in sample,140
+Days in H (war news),42
+Days in L (comparison),42
+L-day selection rule,nearest
+"Var_H/Var_L, WTI benchmark",1.49
+"Var_H/Var_L, 2-Year benchmark",0.62
+2003 value for the 2-Year (Rigobon-Sack Table 3),6.19
+"Order condition N^2-N-2K (N=10, K=3)",84
+Order condition satisfied,yes

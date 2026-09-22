@@ -1,0 +1,11 @@
+Variable,Var on L days,Var on H days,Predicted change in var,"% explained, H days","% explained, all days",% of cumulative var
+WTI Crude Oil Futures,18.366,27.43,--,--,--,--
+2-Year Treasury Yield,30.619,21.738,1.187,5.5,4.5,2.3
+10-Year Treasury Yield,28.714,14.619,2.112,14.4,9.7,4.9
+Break-even Inflation (10-year),5.905,4.0,0.5151,12.9,10.4,5.2
+S&P 500,0.62195,1.004,0.10314,10.3,12.7,6.3
+BBB Corporate Spread (OAS),1.357,2.19,0.80267,36.6,45.3,22.6
+High-Yield Corporate Spread (OAS),25.119,46.786,22.437,48.0,62.4,31.2
+Gold Futures,3408.268,9538.452,5298.475,55.5,81.9,40.9
+U.S. Dollar Index,0.08229,0.17244,0.09526,55.2,74.8,37.4
+3-Month Treasury Bill,4.214,4.095,0.35575,8.7,8.6,4.3
