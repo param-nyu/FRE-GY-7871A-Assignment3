@@ -3,19 +3,24 @@
 from __future__ import annotations
 
 import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 
-from . import heteroskedasticity_iv as hiv
-from . import table_generator as tg
-from . import variance_decomposition as vd
-from .config import (BENCHMARK, BENCHMARK_SHOCK, CORE_END, CORE_START,
-                     INTERIM_DIR, L_DAY_RULE, NOT_REPLICABLE, OUTPUT_DIR,
-                     REPLICATION_BENCHMARK, REPLICATION_ORDER, TABLE_ORDER)
-from .data_loader import coverage_report, load
-from .nlp_tagger import main as tag_main
+# The Agg backend must be selected before pyplot is imported, so the imports
+# below deliberately follow a statement. E402 is suppressed for that reason.
+matplotlib.use("Agg")
+
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+
+from . import heteroskedasticity_iv as hiv  # noqa: E402
+from . import table_generator as tg  # noqa: E402
+from . import variance_decomposition as vd  # noqa: E402
+from .config import (BENCHMARK, BENCHMARK_SHOCK, BENCHMARK_SHOCK_BP,  # noqa: E402
+                     CORE_END, CORE_START, INTERIM_DIR, L_DAY_RULE,
+                     NOT_REPLICABLE, OUTPUT_DIR, REPLICATION_BENCHMARK,
+                     REPLICATION_ORDER, TABLE_ORDER)
+from .data_loader import coverage_report, load  # noqa: E402
+from .nlp_tagger import main as tag_main  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -259,7 +264,7 @@ def run() -> None:
     t2 = tg.table2(coefficients, sign)
     t2_core = tg.table2(core_coefficients, sign)
     t2_repl = tg.table2(repl_coefficients, sign_2y["sign"],
-                        shock=tg.BENCHMARK_SHOCK_BP, order=REPLICATION_ORDER,
+                        shock=BENCHMARK_SHOCK_BP, order=REPLICATION_ORDER,
                         include_2003=True)
     t2b = tg.sign_comparison_oil(t2, coefficients)
 

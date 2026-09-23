@@ -119,7 +119,10 @@ GDELT_QUERY = (
 # A narrower query for the daily intensity timeline. GDELT's timeline endpoint
 # rejects very long boolean queries, so the volume series uses a compact form
 # and the article corpus uses the full one above.
-GDELT_TIMELINE_QUERY = "Iran (strike OR missile OR Hormuz OR ceasefire OR nuclear) sourcelang:english"
+GDELT_TIMELINE_QUERY = (
+    "Iran (strike OR missile OR Hormuz OR ceasefire OR nuclear) "
+    "sourcelang:english"
+)
 
 
 # ---------------------------------------------------------------------------

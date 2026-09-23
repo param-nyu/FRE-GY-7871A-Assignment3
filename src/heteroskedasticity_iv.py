@@ -46,12 +46,12 @@ def rank_condition(dx1: np.ndarray, dx2: np.ndarray,
     returns the pieces so the report can show the condition rather than assert
     it.
     """
-    h, l = high.astype(bool), ~high.astype(bool)
-    omega_h = np.cov(np.vstack([dx1[h], dx2[h]]))
-    omega_l = np.cov(np.vstack([dx1[l], dx2[l]]))
+    hi, lo = high.astype(bool), ~high.astype(bool)
+    omega_h = np.cov(np.vstack([dx1[hi], dx2[hi]]))
+    omega_l = np.cov(np.vstack([dx1[lo], dx2[lo]]))
     delta = omega_h - omega_l
     return {
-        "n_H": int(h.sum()), "n_L": int(l.sum()),
+        "n_H": int(hi.sum()), "n_L": int(lo.sum()),
         "var_H_x1": float(omega_h[0, 0]), "var_L_x1": float(omega_l[0, 0]),
         "var_H_x2": float(omega_h[1, 1]), "var_L_x2": float(omega_l[1, 1]),
         "cov_H": float(omega_h[0, 1]), "cov_L": float(omega_l[0, 1]),
@@ -82,10 +82,11 @@ def order_condition(n_vars: int, n_factors: int) -> dict:
 # Estimators
 # ---------------------------------------------------------------------------
 def _moments(dx1: np.ndarray, dx2: np.ndarray, high: np.ndarray) -> tuple:
-    h, l = high.astype(bool), ~high.astype(bool)
-    return (dx1[h].var(ddof=1), dx1[l].var(ddof=1),
-            dx2[h].var(ddof=1), dx2[l].var(ddof=1),
-            np.cov(dx1[h], dx2[h])[0, 1], np.cov(dx1[l], dx2[l])[0, 1])
+    hi, lo = high.astype(bool), ~high.astype(bool)
+    return (dx1[hi].var(ddof=1), dx1[lo].var(ddof=1),
+            dx2[hi].var(ddof=1), dx2[lo].var(ddof=1),
+            np.cov(dx1[hi], dx2[hi])[0, 1],
+            np.cov(dx1[lo], dx2[lo])[0, 1])
 
 
 def estimate_moment(dx1, dx2, high, which: str = "omega1") -> float:

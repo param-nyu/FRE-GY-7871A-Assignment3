@@ -5,9 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from .config import (BENCHMARK, BENCHMARK_SHOCK, BENCHMARK_SHOCK_BP,
-                     CHANGE_RULES, FRED_SERIES, IRAQ_2003,
-                     IRAQ_2003_SHOCK_BP, OUTPUT_DIR, REPLICATION_ORDER,
+from .config import (BENCHMARK, BENCHMARK_SHOCK, CHANGE_RULES,
+                     FRED_SERIES, IRAQ_2003, OUTPUT_DIR,
                      TABLE_ORDER, YAHOO_SERIES)
 
 NAMES = {**FRED_SERIES, **YAHOO_SERIES}
